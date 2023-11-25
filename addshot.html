@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Be organized, record your ideas on Pinboard.">
+        <meta name="keywords" content="Pinboard">
+        <meta name="theme-color" content="#000">
+
+        <!-- IMPORT CSS MAIN -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!-- IMPORT FONT AWESOME -->
+        <link rel="stylesheet" type="text/css" href="fonts/css/fontawesome.min.css">
+        <link rel="stylesheet" type="text/css" href="fonts/css/all.min.css">
+
+        <!-- IMPORT FAVICON -->
+        <link rel="shortcut icon" href="images/logo/SVG/Pinboard_Logo_Icon.svg" type="image/x-icon">
+        
+        <!-- TITLE -->
+        <title>Add Shot - Pinboard</title>
+    </head>
+    <body>
+
+        <!-- LOADER -->
+        <div class="loader-warpper" id="loader">
+            <img src="images/logo/SVG/Pinboard_Logo_Icon_Transparent.svg" alt="" class="loader">
+        </div>
+
+
+        <!-- NAVBAR -->
+        <nav>
+            <ul>
+                <a href="index.html" title="Pinboard"><img src="images/logo/SVG/Pinboard_Logo_White.svg" alt=""></a>
+            </ul>
+            <ul>
+                <!-- FORM: SEARCH -->
+                <div class="search-mobile" id="searchMobile">
+                    <form action="" method="post">
+                        <button class="far fa-search"></button>
+                        <input type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                </div>
+                <a href="javascript:searchMobile()" class="searchMobile"><li class="far fa-search"></li></a>
+
+                <!-- AVATER USER -->
+                <img src="images/avatar/avatar-2.jpg" alt="" onclick="dropdownAvatarUser()">
+            </ul>
+
+            <!-- DROPDOWN AVATAR USER -->
+            <div class="dropdown-avatar-user" id="dropdownAvatarUser">
+                <div>
+                    <img src="images/avatar/avatar-2.jpg" alt="">
+                    <a href="profile.html">
+                        <div>
+                            <p>Mahdi</p>
+                            <p>mrabiee175@gmail.com</p>
+                        </div>
+                    </a>
+                </div>
+                <a href=""><li><span class="far fa-user"></span> Account Settings</li></a>
+                <a href=""><li><span class="far fa-cog"></span> Settings</li></a>
+                <a href=""><li><span class="far fa-sign-out"></span> Sign Out</li></a>
+            </div>
+        </nav>
+
+        <!-- MAIN -->
+        <main>
+            <!-- SIDEBAR/ASIDE -->
+            <aside class="aside-left">
+                <a href="index.html"><li class=""><span class="far fa-home"></span> <span>Home</span></li></a>
+                <a href="javascript:inbox()"><li class=""><span class="far fa-comment"></span> <span>Inbox</span></li></a>
+                <a href="addshot.html"><li class="aside-left-item-active"><span class="far fa-plus"></span> <span>Add Shot</span></li></a>
+                <a href="profile.html"><li class=""><span class="far fa-save"></span> <span>Saved</span></li></a>
+            </aside>
+            
+            <aside class="aside-right">
+                <!-- ADDSHOT -->
+                <div class="addshot">
+                    <h1>Add Photo</h1>
+
+                    <!-- FORM: UPLOAD PHOTO -->
+                    <form action="" method="post">
+                        <input type="file" multiple>
+
+                        <div>
+                            <label for="Sel">Select Board</label>
+                            <select name="" id="Sel">
+                                <option value="" selected>Default Board</option>
+                                <option value="">Web</option>
+                                <option value="">UI/UX</option>
+                                <option value="">Programming</option>
+                                <option value="">Banner</option>
+                            </select>
+                        </div>
+
+                        <input type="submit" value="Upload">
+                    </form>
+                </div>
+            </aside>
+        </main>
+
+
+
+        <!-- IMPORT JS -->
+        <script src="js/app.js"></script>
+    
+    </body>
+</html>
